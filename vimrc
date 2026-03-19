@@ -54,3 +54,4 @@ if filereadable("/etc/vim/vimrc.local")
 endif
 
 set nu
+let @a = ":filetype detect\<CR>"
