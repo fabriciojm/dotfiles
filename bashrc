@@ -1,8 +1,5 @@
 # .bashrc
-#export BASH_CONF="bashrc"
-#export TERM=xterm-256color
 export TERM=screen-256color
-#export PS1="\[\033[38;5;9m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;12m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;12m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
 # ---------- Nord color palette ----------
 NORD_DIR="\[\033[38;5;110m\]"      # Nord8
@@ -29,31 +26,17 @@ git_info() {
 # ---------- Prompt ----------
 PS1="${NORD_DIR}\w${RESET} ${NORD_GIT}\$(git_info)${RESET}\n${NORD_PROMPT}\\$ ${RESET}"
 
-
-
 export PATH=$HOME/bin:$PATH
-#export TERMINFO=$HOME/.terminfo
-
-# Source global definitions
-#if [ -f /etc/bashrc ]; then
-#	. /etc/bashrc
-#fi
 
 # User specific aliases and functions
 
-alias new="tmux new -s t1"
-alias attach="tmux attach -t t1"
 alias ls='ls --color=auto'
 alias ll="ls -lhA"
-alias la="ls"
 alias sl="ls"
-alias ks="ls"
-alias ka="ls"
-alias l="ls"
-alias s="ls"
-alias no="cd ~/notes/"
-alias recon="killall -10 tmux"
 alias dime="readlink -f"
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
 export EDITOR=vim
 
 alias more='less -i'
