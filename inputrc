@@ -1,0 +1,10 @@
+
+set input-meta on
+set convert-meta off
+set bell-style none
+$if Bash
+"\C-xssh": "/usr/bin/ssh "
+"\C-xscp": "/usr/bin/scp "
+"\C-xsu":  "/usr/bin/su "
+"\C-xdo":  "/usr/bin/sudo "
+$endif
