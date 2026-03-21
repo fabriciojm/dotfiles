@@ -1,8 +1,11 @@
 #!/bin/bash
 
-ln -sf ~/dotfiles/bashrc ~/.bashrc
-ln -sf ~/dotfiles/vimrc ~/.vimrc
-ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
-ln -sf ~/dotfiles/inputrc ~/.inputrc
+filenames=("bashrc" "vimrc" "tmux.conf" "inputrc")
+
+for file in "${filenames[@]}"; do
+  dotfile="$HOME/dotfiles/$file"
+  [[ -f "$dotfile" ]] || continue
+  ln -sf "$dotfile" "$HOME/.$file"
+done
 
 echo "Done linking dotfiles"
