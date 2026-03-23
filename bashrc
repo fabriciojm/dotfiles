@@ -34,6 +34,7 @@ alias ls='ls --color=auto'
 alias ll="ls -lhA"
 alias sl="ls"
 alias dime="readlink -f"
+alias path="echo $PATH | tr ':' '\n'"
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
