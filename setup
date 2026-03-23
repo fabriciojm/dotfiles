@@ -2,10 +2,14 @@
 
 filenames=("bashrc" "vimrc" "tmux.conf" "inputrc")
 
+link() {
+  ln -sf "$1" "$HOME/.$2"
+}
+
 for file in "${filenames[@]}"; do
   dotfile="$HOME/dotfiles/$file"
   [[ -f "$dotfile" ]] || continue
-  ln -sf "$dotfile" "$HOME/.$file"
+  link $dotfile $file
 done
 
 echo "Done linking dotfiles"
