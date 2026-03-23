@@ -3,7 +3,9 @@
 filenames=("bashrc" "vimrc" "tmux.conf" "inputrc")
 
 link() {
-  ln -sf "$1" "$HOME/.$2"
+  local src="$1"
+  local dest="$HOME/.$2"
+  ln -sf "$src" "$dest"
 }
 
 for file in "${filenames[@]}"; do
