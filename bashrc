@@ -43,8 +43,22 @@ export EDITOR=vim
 alias more='less -i'
 alias less='less -i '
 
+# kubernetes-related
+alias k='kubectl'
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+
+
+source /etc/bash_completion
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl k
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/home/fabricio/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

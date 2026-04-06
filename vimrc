@@ -61,3 +61,10 @@ syntax enable
 filetype plugin indent on
 
 let @a = ":filetype detect\<CR>"
+let mapleader = " "
+
+" Highlight trailing whitespaces, helpful (YAML)
+autocmd BufRead,BufNewFile * match Error /\s\+$/
+
+" Smart backspace
+set backspace=indent,eol,start
