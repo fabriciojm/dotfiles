@@ -45,6 +45,7 @@ alias less='less -i '
 
 # kubernetes-related
 alias k='kubectl'
+alias lab='cd ~/lab'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
