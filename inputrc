@@ -8,3 +8,10 @@ $if Bash
 "\C-xsu":  "/usr/bin/su "
 "\C-xdo":  "/usr/bin/sudo "
 $endif
+
+set editing-mode vi
+set keymap vi-insert
+"\C-l": clear-screen
+"\C-e": end-of-line
+"\C-a": beginning-of-line
+"\C-u": kill-line
