@@ -74,7 +74,7 @@ short_pwd() {
 PS1='\[\033[38;5;179m\]\u@\h:\[\033[0m\]\[\033[38;5;110m\]$(short_pwd)\[\033[0m\] \[\033[38;5;142m\]$(git_info)\[\033[0m\]\n\[\033[38;5;67m\]\$ \[\033[0m\]'
 #PS1="${NORD_DIR}\w${RESET} ${NORD_GIT}\$(git_info)${RESET}\n${NORD_PROMPT}\\$ ${RESET}"
 
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:$HOME/go/bin:$PATH
 
 # User specific aliases and functions
 
