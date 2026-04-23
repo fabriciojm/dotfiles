@@ -62,6 +62,9 @@ filetype plugin indent on
 
 let @a = ":filetype detect\<CR>"
 let mapleader = " "
+nnoremap <leader>s :w<bar>execute "silent !slides %:p"<bar>redraw!<CR>
+
+
 
 " Highlight trailing whitespaces, helpful (YAML)
 autocmd BufRead,BufNewFile * match Error /\s\+$/
