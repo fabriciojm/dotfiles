@@ -1,6 +1,6 @@
 #!/bin/bash
 
-filenames=("bashrc" "vimrc" "tmux.conf" "inputrc")
+filenames=("bashrc" "vimrc" "tmux.conf" "inputrc" "obsidian.vimrc")
 
 link() {
   local src="$1"
