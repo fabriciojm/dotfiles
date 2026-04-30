@@ -1,6 +1,4 @@
 # .bashrc
-export TERM=screen-256color
-
 # ---------- Nord color palette ----------
 NORD_DIR="\[\033[38;5;110m\]"      # Nord8
 NORD_GIT="\[\033[38;5;142m\]"      # Nord14
@@ -125,6 +123,9 @@ if command -v kubectl >/dev/null 2>&1; then
   source <(kubectl completion bash)
   complete -o default -F __start_kubectl k
 fi
+
+# Reload .inputrc keybindings
+[ -f ~/.inputrc ] && bind -f ~/.inputrc
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 [ -d "$HOME/.rd/bin" ] && export PATH="$HOME/.rd/bin:$PATH"
