@@ -26,4 +26,10 @@ else
   echo "Skipping Obsidian vimrc: OBSIDIAN is not set"
 fi
 
+if [[ -n "${AERC_PATH:-}" ]]; then
+  ln -sf "$HOME/dotfiles/aerc.conf" "$AERC_PATH/aerc.conf"
+else
+  echo "Skipping Obsidian vimrc: OBSIDIAN is not set"
+fi
+
 echo "Done linking dotfiles"

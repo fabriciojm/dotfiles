@@ -73,6 +73,7 @@ PS1='\[\033[38;5;179m\]\u@\h:\[\033[0m\]\[\033[38;5;110m\]$(short_pwd)\[\033[0m\
 #PS1="${NORD_DIR}\w${RESET} ${NORD_GIT}\$(git_info)${RESET}\n${NORD_PROMPT}\\$ ${RESET}"
 
 export PATH=$HOME/bin:$HOME/go/bin:$PATH
+export GPG_TTY=$(tty)
 
 # User specific aliases and functions
 
