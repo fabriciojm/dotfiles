@@ -1,6 +1,6 @@
 #!/bin/bash
 
-filenames=("bashrc" "vimrc" "tmux.conf" "inputrc")
+filenames=("bashrc" "vimrc" "tmux.conf" "inputrc" "bash_profile")
 
 link() {
   local src="$1"
@@ -29,7 +29,7 @@ fi
 if [[ -n "${AERC_PATH:-}" ]]; then
   ln -sf "$HOME/dotfiles/aerc.conf" "$AERC_PATH/aerc.conf"
 else
-  echo "Skipping Obsidian vimrc: OBSIDIAN is not set"
+  echo "Skipping Aerc: AERC_PATH is not set"
 fi
 
 echo "Done linking dotfiles"
