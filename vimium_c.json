@@ -1,0 +1,47 @@
+{
+	"name": "Vimium C",
+	"@time": "14/05/2026, 00:34:21",
+	"time": 1778711661500,
+	"environment": {
+		"extension": "2.12.2",
+		"platform": "mac",
+		"chromium": 148
+	},
+	"exclusionRules": [
+		{
+			"passKeys": "",
+			"pattern": ":https://mail.google.com/"
+		},
+		{
+			"passKeys": "m ",
+			"pattern": ":https://calendar.google.com/"
+		}
+	],
+	"keyLayout": 2,
+	"searchEngines": [
+		"g|go|gg|google|Google: https://www.google.com/search?q=%s \\",
+		"  www.google.com re=/^(?:\\.[a-z]{2,4})?\\/search\\b.*?[#&?]q=([^#&]*)/i \\",
+		"  blank=https://www.google.com/ Google",
+		"d|dd|ddg|duckduckgo: https://duckduckgo.com/?q=%s DuckDuckGo",
+		"p|perplexity: https://www.perplexity.ai/?q=%s \\",
+    "  blank=https://www.perplexity.ai Perplexity",
+		"c|chatgpt: https://chatgpt.com/?q=%s \\",
+    "  blank=https://www.chatgpt.com ChatGPT",
+		"g.m|gm|g.map|gmap: https://www.google.com/maps?q=%s \\",
+		"  blank=https://www.google.com/maps Google Maps",
+		"y|yt: https://www.youtube.com/results?search_query=%s \\",
+		"  blank=https://www.youtube.com/ YouTube",
+		"w|wiki: https://www.wikipedia.org/w/index.php?search=%s Wikipedia",
+		"g.s|gs|gscholar: https://scholar.google.com/scholar?q=$s \\",
+		"  scholar.google.com re=/^(?:\\.[a-z]{2,4})?\\/scholar\\b.*?[#&?]q=([^#&]*)/i \\",
+		"  blank=https://scholar.google.com/ Google Scholar",
+		"\\:i: vimium://sed/s/^//,lower\\ $S re= Lower case",
+		"v.m|math: vimium://math\\ $S re= Calculate",
+		"v.p: vimium://parse\\ $S re= Redo Search",
+		"gh|github: https://github.com/search?q=$s \\",
+		"  blank=https://github.com/ GitHub Repo",
+		"kd: https://kubernetes.io/search/?q=$s",
+		""
+	],
+	"vimSync": true
+}
