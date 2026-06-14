@@ -1,3 +1,10 @@
 [tools]
 bat = "latest"
 chezmoi = "latest"
+fd = "latest"
+ripgrep = "latest"
+npm = "latest"
+lazygit = "latest"
+fzf = "latest"
+flux2 = "latest"
+k9s = "latest"
