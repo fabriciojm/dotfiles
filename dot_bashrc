@@ -85,6 +85,7 @@ alias path="echo $PATH | tr ':' '\n'"
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
+alias v="nvim"
 export EDITOR=vim
 
 alias more='less -i'
