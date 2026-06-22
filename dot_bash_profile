@@ -4,4 +4,4 @@ test -f ~/.bashrc && . ~/.bashrc
 export PATH="/home/fabricio/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
-. "$HOME/.local/bin/env"
+# . "$HOME/.local/bin/env"
