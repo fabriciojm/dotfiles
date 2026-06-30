@@ -19,6 +19,8 @@ elif command -v brew >/dev/null 2>&1; then
     fpath=("$brew_site_functions" $fpath)
   fi
   unset brew_site_functions
+else
+  fpath+=($HOME/.zsh/pure)
 fi
 
 
@@ -30,6 +32,18 @@ prompt pure
 # enable zsh vi-mode
 bindkey -v
 export KEYTIMEOUT=1 # make switching between modes faster
+
+# # Keep useful Emacs-style shortcuts in vi insert mode
+# bindkey -M viins '^L' clear-screen
+# bindkey -M viins '^E' end-of-line
+# bindkey -M viins '^A' beginning-of-line
+# bindkey -M viins '^U' kill-line
+# 
+# # Same Ctrl-x prefixes as your inputrc
+# bindkey -s '^Xssh' '/usr/bin/ssh '
+# bindkey -s '^Xscp' '/usr/bin/scp '
+# bindkey -s '^Xsu'  '/usr/bin/su '
+# bindkey -s '^Xdo'  '/usr/bin/sudo '
 
 # ~~~~~~~~~~~~~~~ Mise ~~~~~~~~~~~~~~~~~~~~~~~~
 
