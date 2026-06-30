@@ -2,5 +2,5 @@
 # packages hash: {{ include "dot_config/mise/config.toml" | sha256sum }}
 #$HOME/.local/bin/mise trust $HOME/.config/mise/config.toml && $HOME/.local/bin/mise install
 if command -v mise >/dev/null 2>&1; then
-   mise trust $HOME/.config/mise/config.toml && mise install
+   mise trust $HOME/.config/mise/config.toml.tmpl && mise install
 fi
