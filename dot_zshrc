@@ -11,14 +11,16 @@ SAVEHIST=100000
 
 PURE_GIT_PULL=0
 
-# Should update to chezmoi templating
-if [[ "$OSTYPE" == darwin* ]]; then
-  fpath+=("$(brew --prefix)/share/zsh/site-functions")
-else
-  fpath+=("$(npm root -g)/pure-prompt")
-
-  #fpath+=($HOME/.zsh/pure)
+if [[ -d "$HOME/.zsh/pure" ]]; then
+  fpath=("$HOME/.zsh/pure" $fpath)
+elif command -v brew >/dev/null 2>&1; then
+  brew_site_functions="$(brew --prefix)/share/zsh/site-functions"
+  if [[ -d "$brew_site_functions" ]]; then
+    fpath=("$brew_site_functions" $fpath)
+  fi
+  unset brew_site_functions
 fi
+
 
 autoload -U promptinit; promptinit
 
