@@ -29,6 +29,13 @@ prompt pure
 bindkey -v
 export KEYTIMEOUT=1 # make switching between modes faster
 
+# ~~~~~~~~~~~~~~~ Mise ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+if command -v mise > /dev/null ; then
+  eval "$($HOME/.local/bin/mise activate zsh)"
+fi
+
 
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -78,12 +85,5 @@ if command -v lsd > /dev/null ; then
   alias la='ls -lathr'
   alias lla='ls -lgha'
   alias lt='ls --tree'
-fi
-
-# ~~~~~~~~~~~~~~~ Mise ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-if command -v mise > /dev/null ; then
-  eval "$($HOME/.local/bin/mise activate zsh)"
 fi
 
