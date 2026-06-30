@@ -1,4 +1,6 @@
+{{ if not (lookPath "mise") }}
 [".local/bin/mise"]
 type = "file"
+url = "https://mise.run"
 executable = true
-url = "{{ if not (lookPath "mise") }}https://mise.jdx.dev/mise-latest-{{.chezmoi.os}}-{{.chezmoi.arch}}{{ end }}"
+{{ end }}
