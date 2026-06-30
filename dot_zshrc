@@ -33,7 +33,8 @@ export KEYTIMEOUT=1 # make switching between modes faster
 
 
 if command -v mise > /dev/null ; then
-  eval "$($HOME/.local/bin/mise activate zsh)"
+  #eval "$($HOME/.local/bin/mise activate zsh)"
+  eval "$(mise activate zsh)"
 fi
 
 
