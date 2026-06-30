@@ -15,7 +15,9 @@ PURE_GIT_PULL=0
 if [[ "$OSTYPE" == darwin* ]]; then
   fpath+=("$(brew --prefix)/share/zsh/site-functions")
 else
-  fpath+=($HOME/.zsh/pure)
+  fpath+=("$(npm root -g)/pure-prompt")
+
+  #fpath+=($HOME/.zsh/pure)
 fi
 
 autoload -U promptinit; promptinit
