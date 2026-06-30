@@ -1,7 +1,6 @@
 [tools]
 bat = "latest"
 chezmoi = "latest"
-fd = "latest"
 ripgrep = "latest"
 lsd = "latest"
 npm = "latest"
@@ -10,5 +9,8 @@ fzf = "latest"
 flux2 = "latest"
 k9s = "latest"
 vim = "latest"
-neovim = "latest"
 gh = "latest"
+{{ if not (and (eq .chezmoi.os "darwin") (eq .chezmoi.arch "amd64")) }}
+fd = "latest"
+neovim = "latest"
+{{ end }}
