@@ -5,6 +5,7 @@ HISTFILE="$HOME/.zsh_history"
 HISTSIZE=100000
 SAVEHIST=100000
 
+
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -24,7 +25,6 @@ fi
 
 
 autoload -U promptinit; promptinit
-zstyle ':completion:*' menu select
 
 prompt pure
 
