@@ -33,12 +33,6 @@ prompt pure
 bindkey -v
 export KEYTIMEOUT=1 # make switching between modes faster
 
-# # Keep useful Emacs-style shortcuts in vi insert mode
-# bindkey -M viins '^L' clear-screen
-# bindkey -M viins '^E' end-of-line
-# bindkey -M viins '^A' beginning-of-line
-# bindkey -M viins '^U' kill-line
-# 
 # # Same Ctrl-x prefixes as your inputrc
 # bindkey -s '^Xssh' '/usr/bin/ssh '
 # bindkey -s '^Xscp' '/usr/bin/scp '
@@ -87,9 +81,11 @@ fi
 
 if command -v kubectl >/dev/null 2>&1; then
   source <(kubectl completion zsh)
-  #complete -o default -F __start_kubectl k
 fi
 
+# ~~~~~~~~~~~~~~~ Interactive comments ~~~~~~~~~~~
+
+setopt interactivecomments
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
