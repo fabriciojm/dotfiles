@@ -1,5 +1,4 @@
-# .bashrc
-# ---------- Nord color palette ----------
+# .bashrc ---------- Nord color palette ----------
 NORD_DIR="\[\033[38;5;110m\]"      # Nord8
 NORD_GIT="\[\033[38;5;142m\]"      # Nord14
 NORD_PROMPT="\[\033[38;5;67m\]"    # Nord9

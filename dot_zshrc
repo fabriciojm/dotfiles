@@ -108,3 +108,9 @@ if command -v lsd > /dev/null ; then
   alias lt='ls --tree'
 fi
 
+# ~~~~~~~~~~~~~~~ Misc ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Only use keychain if no SSH_AUTH_SOCK is already provided
+if [ -z "$SSH_AUTH_SOCK" ] && command -v keychain >/dev/null 2>&1; then
+  eval "$(keychain --eval --quiet ~/.ssh/id_ed25519)"
+fi
