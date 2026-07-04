@@ -97,7 +97,7 @@ alias k=kubectl
 compdef _kubectl k
 
 if command -v bat > /dev/null ; then
-  alias cat="bat"
+  alias cat="bat --style 'changes,header-filename,snip'"
 fi
 
 if command -v lsd > /dev/null ; then
