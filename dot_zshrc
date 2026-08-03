@@ -95,6 +95,12 @@ alias gp="git pull"
 alias lg=lazygit
 alias k=kubectl
 compdef _kubectl k
+alias tmn="tmux new -s"
+alias tat="tmux attach -t"
+alias tls="tmux ls"
+alias hl="cd ~/homelab/"
+alias yw="cd ~/yara-workflows/"
+alias know="cd ~/iCloud/knowledge/"
 
 if command -v bat > /dev/null ; then
   alias cat="bat --style 'changes,header-filename,snip'"
